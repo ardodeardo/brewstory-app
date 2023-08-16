@@ -1,7 +1,11 @@
 import React from 'react'
 
-function Read(props: any) {
-  const { id } = props.params;
+export function generateStaticParams() {
+  return [{ id: '1' }, { id: '2' }]
+}
+
+function Read({params}: {params: {id: string | number}}) {
+  const { id } = params;
 
   return (
     <>
